@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Project</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        #blog-form {
+            margin-bottom: 20px;
+        }
+
+        #blog-form input, #blog-form textarea {
+            display: block;
+            margin: 10px 0;
+            width: 50%;
+            padding: 10px;
+            font-size: 16px;
+        }
+
+        #postBlog {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .blog-post {
+            border: 1px solid #ddd;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .blog-post img {
+            max-width: 100%;
+        }
+
+        .blog-post button {
+            margin-right: 10px;
+            cursor: pointer;
+        }
+
+        .blog-count {
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+
+    <h1>Blog Project</h1>
+    <p class="blog-count">Total Blogs: <span id="blogCount">0</span></p>
+
+    <form id="blog-form">
+        <input type="text" id="title" placeholder="Blog Title" required>
+        <input type="url" id="imageUrl" placeholder="Image URL" required>
+        <textarea id="description" placeholder="Blog Description" rows="2" required></textarea>
+        <button type="submit" id="postBlog">Post Blog</button>
+    </form>
+
+    <div id="blog-list"></div>
+
+    <script src="first.js"></script>
+</body>
+</html>
